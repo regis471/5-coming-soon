@@ -3,3 +3,5 @@ import { renderSocials } from './components/renderSocials.js';
 
 renderSocials('footer > .socials', socialsData);
 
+
+

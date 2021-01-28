@@ -11,6 +11,13 @@ const socialsData = [
         icon: 'github',
         href: '#'
     },
+    
+    {
+        icon: 'hantelis',
+        href: '#'
+    },
+
+    '555',
     {
         icon: 'tumblr',
         href: '#'
