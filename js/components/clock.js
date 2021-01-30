@@ -1,7 +1,27 @@
-function clock(selector) {
+function clock(selector, deadline) {
+    // input validation
+    if (typeof selector !== 'string'||
+        selector === ''){
+        console.error('ERROR: netinkoamo formato selectorius');
+        return false;
+        }
+    if (typeof deadline !== 'string'||
+        deadline === '' ||
+        !isFinite((new Date (`2000-${deadline}`)).getTime())) {
+        console.error('ERROR: netinkoamo formato selectorius');
+        return false;
+        }
+
+
+// logic 
     const clockDOM = document.querySelector(selector);
+    if (!clockDOM) {
+        console.error('ERROR: pgal pateikta slectoriu nepayko rasti DOM selectoriaus')
+        return false;
+    }
+
+
     let allValuesDOM = null;
-    const deadline = '01-04 14:00:00';
     let numbers = calcTime(deadline);
     const labels = ['days', 'hours', 'minutes', ' seconds'];
     let HTML = '';
