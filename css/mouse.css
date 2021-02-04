@@ -1,49 +1,72 @@
 .mouse {
     display: inline-block;
     width: 20px;
-    height: 24px;
-    border : 2px solid #fff;
-    border-radius: 8px;
+    height: 30px;
+    border : 3px solid #fff;
+    border-radius: 10px;
     text-align: center;
 }
 .mouse > .wheel {
     display: inline-block;
-    width: 2px;
-    height: 3px;
+    width: 3px;
+    height: 6px;
     margin-top: 4px;
     background-color: #fff;
     border-radius: 5px;
-    animation-name: mouseMove;
-    animation-duration: 1.3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease; 
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-    animation-direction: normal;
-    animation-play-state: paused;
-
-}
-.mouse:hover > .wheel {
-    animation-play-state: paused;
+    animation-name: mouseMove;  /* animacijos pavadinimas is keyframes */
+    animation-duration: 1.3s;   /* tempas arba sekundes arba milisekundes */
+    animation-iteration-count: infinite;    /* kiek kartu veikia animacija */
+        /*  background-image: url(../img/logo.png); */
+        /* background-size: contain;  */
     
-}
+        /*animation-timing-function: ease;  laiko funkcija, kaip animacija per ta laika juda jei step(5)per 10s tai kas 2s animacija juda */
+        /* animation-delay: 1s; - visos animacijos uzlaukimas */
+        /* animation-fill-mode: forwards; - default(none), kai animacija pasibaigs koki stiliu pritaikyti */
+        /* animation-direction: normal; - animacios reiksmes skaitymas (reverse/alternate/normal */
+        /* animation-play-state: paused; - default(running)/ paused an */
 
-@keyframes mouseMove {
-    0% {
-        margin-top: 4px;
+}
+        /* .mouse:hover > .wheel { 
+            animation-play-state: paused;
+                kiekvieno uzmejimo ant animacijos metu ji yra 
+        } */
+
+@keyframes mouseMove {  /*mouseMove - pavadinimas, kad atitiktu aplinkybes, kokias mes norim suanimuoti */
+    0% {    /* animacijos pradzia */
+        margin-top: 5px;
         background-color: #fff;
-        transform: rotate(0deg);
-        opacity: 1;
+            /* transform: rotate(0deg); */
+            /* opacity: 1; */ /*  elemento ir jame esancio turinio persvieciamumas 1/0.9/0.8 - 0 */
     }
     50% {
         background-color: #fff;
-        opacity: 1;
+             /* opacity: 1; */ /* iki sio tasko animacija turi islikti tokia pati, bet nuo cia iki 100% pradeti persisviesti  */
     }
-    100% {
-        margin-top: 8px;
-        background-color: #fff0;
-        transform: rotate(720deg);
+    100% {      /* animacijos pabaiga */
+        margin-top: 15px;
+        background-color: #fff0; /* pirmai permatomas nes prie spalvos pridetas skaicius nurodantis spalvos persvieciamuma */
+            /* transform: rotate(720deg); */
         
-        opacity: 0;
+            /* opacity: 0; */ /* kai nulis visiskai nematomas, kadangi 1.3s tai dalinasi laikas 
+            su dingumu pvz 1.3/1 ir kas tiek laiko skaiciuoja dingima */
     }
 }
+
+/* transparent yra spalvos reiksme */
+/* norint tureti animacijoje santykine pauze reikia apskaiciuoti tinkamu metu, 
+kad elementas nekeistu savo stiliaus pvz
+
+@keyframes mouseMove {
+    0% {
+        margin-top: 5px;
+        background-color: #fff; 
+    }
+    50% {
+        margin-top: 5px;
+        background-color: #fff; 
+    }
+    100% {
+        margin-top: 18px;
+        background-color: #fff0; 
+    }
+} */
