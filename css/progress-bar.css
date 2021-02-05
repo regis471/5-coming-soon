@@ -31,4 +31,14 @@
     width: 80%;
     height: 100%;
     background-color: var(--main-color);
+    animation-name: loading;
+    animation-duration: 1.5s;
+}
+@keyframes loading {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80%;
+    }
 }
