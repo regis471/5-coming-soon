@@ -1,7 +1,7 @@
 const progressBarData = [
     {
         label: 'UX Design',
-        value : 90
+        value : 91
     },
     {
         label: 'Web Design',
@@ -9,7 +9,7 @@ const progressBarData = [
     },
     {
         label: 'Web development',
-        value : 56
+        value : 58
     },
 ];
 
