@@ -41,7 +41,7 @@ class ProgressBar {
                             <div class="label">${progressBar.label}</div>
                             <div class="value">${progressBar.value}%</div>
                         </div>
-                        <div class = "bar">
+                        <div class="bar">
                             <div class="progress" styles="width: ${progressBar.value}%;"></div>
                         </div>
                     </div>`;
@@ -52,7 +52,6 @@ class ProgressBar {
         let HTML = '';
 
         for (const progress of this.data) {
-            console.log(progress);
             HTML += this.generateProgressBar(progress);
         }
 
