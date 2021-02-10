@@ -1,6 +1,6 @@
 /* basic style */
 
-.bg-blue {
+.bg-main {
     background-color: var(--main-color);
 }
 
@@ -82,7 +82,7 @@ main .block-title{
 }
 main .block-description{
     margin-bottom: 30px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
 }
 main .block-description > a{
@@ -139,13 +139,13 @@ footer.container {
     border-radius: 50% ;
     transition: all 0.2s;
 }
+.socials > .fa::before {
+   font-size: 20px;
+   
+}
 .socials > .fa:hover {
     background-color: #fff;
-    color: blue;
-}
-.socials > .fa::before {
-   font-size:20px;
-   
+    color: #03a9f4;
 }
 footer a{    
     color: #fff;

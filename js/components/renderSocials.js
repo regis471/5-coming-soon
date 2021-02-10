@@ -38,7 +38,10 @@ function renderSocials(selector, data) {
             continue;
         }
 
-        HTML += `<a href="${socialObject.href}" target="_blank" class="fa fa-${socialObject.icon}" >${socialObject.icon}</a>`;
+        HTML += `<a href="${socialObject.href}" 
+        target="_blank" 
+        class="fa fa-${socialObject.icon}" 
+        rel=noreferrer noopener>${socialObject.icon}</a>`;
     }
         //post logic validation
         if (!HTML === ''){
