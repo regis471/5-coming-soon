@@ -22,7 +22,7 @@ class Validation {
         }
 
         //visos likusios - tik mazosios
-        if (Validation.isLowercaseButFirst(name)) {
+        if (!Validation.isLowercaseButFirst(name)) {
             return 'Vardo visos likusios raides, isskyrus pirma, turi buti mazosios.';
         }
 
@@ -91,7 +91,7 @@ class Validation {
     }
     static isLowercaseButFirst(text) {
         const rest = text.slice(1);
-        return rest = rest.toLowercase();
+        return rest === rest.toLowerCase();
     }
     static textContainsLetter(text, letter, count = 1) {
         let letterCount = 0;
@@ -107,7 +107,7 @@ class Validation {
     }
     static onlyAlphabetLetters(text) {
         const uppercase = text.toUpperCase();
-        const lowercase = text.toLowercase();
+        const lowercase = text.toLowerCase();
         const size = text.length;
 
         for (let i=0; i<size; i++) {
