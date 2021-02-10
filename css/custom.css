@@ -132,8 +132,9 @@ footer.container {
 }
 .socials > .fa {
     width: 40px;
-    font-size: 20px;;
+    font-size: 0;
     color: #fff;
+    height: 40px;
     line-height: 40px;
     border-radius: 50% ;
     transition: all 0.2s;
@@ -141,6 +142,10 @@ footer.container {
 .socials > .fa:hover {
     background-color: #fff;
     color: blue;
+}
+.socials > .fa::before {
+   font-size:20px;
+   
 }
 footer a{    
     color: #fff;
