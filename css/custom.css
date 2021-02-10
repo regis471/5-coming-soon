@@ -7,8 +7,13 @@
 /* hero section */
 
 .hero{
+    min-height: 100vh;
     text-align: center;
     padding-bottom: 30px;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
 }
 
 .hero .logo{
@@ -78,6 +83,7 @@ main .block-title{
 main .block-description{
     margin-bottom: 30px;
     font-size: 18px;
+    line-height: 24px;
 }
 main .block-description > a{
     color: var(--secondary-color);
