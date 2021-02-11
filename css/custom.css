@@ -204,7 +204,10 @@ footer > .short-row > p {
     width: 100%;
 }
 
-@media (max-width: 700px){
+@media (max-width: 680px){
+    .container > .back-to-top {
+        display: none;
+    }
     .bottom-texts{
         flex-direction: column;
         
