@@ -8,6 +8,7 @@
     color: #fff;
     cursor: pointer;
     border: none;
+    text-align: center;
     /* opacity: 1; */
 
 }
@@ -15,4 +16,13 @@
     background-color: var(--secondary-color-light);
     box-shadow: 1px -1px 2px 1px #800000;
     /* opacity: 0.9; */
+}
+.btn.fa {
+    font-size: 27px;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    line-height: 36px;
+    border-radius: 50%;
+
 }
