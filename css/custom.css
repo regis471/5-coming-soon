@@ -1,14 +1,19 @@
 /* basic style */
 
-.bg-blue {
+.bg-main {
     background-color: var(--main-color);
 }
 
 /* hero section */
 
 .hero{
+    min-height: 100vh;
     text-align: center;
     padding-bottom: 30px;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
 }
 
 .hero .logo{
@@ -37,8 +42,17 @@
 .hero .clock{
     margin-bottom: 60px;    
 }
-.hero form{
+.hero .form{
     margin-bottom: 20px;
+    
+}
+.hero .form > input{
+    color: #fff;
+    border-bottom-color: #fff;
+}
+.hero .form > input::placeholder{
+    color: #fff;
+   
 }
 .hero .mouse{
     
@@ -68,16 +82,28 @@ main .block-title{
 }
 main .block-description{
     margin-bottom: 30px;
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 24px;
 }
 main .block-description > a{
-    color: #ea1e63;
+    color: var(--secondary-color);
     text-decoration: none;
 }
 main .block-description > a:hover {
     text-decoration: underline;
 }
-
+.right-column .form button {
+    float: right;
+}
+@media (min-width: 1100px) {
+    .right-column .form > input {
+        width: calc(50% - 10px);
+        float: left;
+    }
+    .right-column .form > input:first-of-type {
+        margin-right: 20px;
+    }
+}
 @media (max-width:900px){
     .left-column{   
         width: 100%;
@@ -98,6 +124,16 @@ footer.container {
     padding-top: 0;
 
 }
+.container > .back-to-top {
+    position: relative;
+    
+
+}
+.container > .back-to-top > .btn {
+    position: absolute;
+    top: -25px;
+    right: -11px;
+}
 .container > .socials {
     padding: 15px 0;
     border-bottom: 2px solid #fff;
@@ -106,15 +142,20 @@ footer.container {
 }
 .socials > .fa {
     width: 40px;
-    font-size: 20px;;
+    font-size: 0;
     color: #fff;
+    height: 40px;
     line-height: 40px;
     border-radius: 50% ;
     transition: all 0.2s;
 }
+.socials > .fa::before {
+   font-size: 20px;
+   
+}
 .socials > .fa:hover {
     background-color: #fff;
-    color: blue;
+    color: #03a9f4;
 }
 footer a{    
     color: #fff;
@@ -163,7 +204,10 @@ footer > .short-row > p {
     width: 100%;
 }
 
-@media (max-width: 700px){
+@media (max-width: 680px){
+    .container > .back-to-top {
+        display: none;
+    }
     .bottom-texts{
         flex-direction: column;
         
